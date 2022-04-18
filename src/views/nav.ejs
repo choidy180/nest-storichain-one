@@ -1,0 +1,21 @@
+<div class="nav">
+  <div class="left">
+    <ion-icon name="grid-outline"></ion-icon>
+  </div>
+  <div class="center">
+    <span onclick="location.href='/'">STORICHAIN</span>
+  </div>
+  <div class="right">
+    <%if (url == "/login"){ %>
+      <div class="sign_btn">
+        <span onclick="location.href='/join'">회원가입</span>
+      </div>
+    <%} else if (url == "/join" || url == "/"){%>
+      <div class="login_btn">
+        <span onclick="location.href='/login'">로그인</span>
+      </div>
+    <%}%>
+  </div>
+</div>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>

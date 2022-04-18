@@ -1,0 +1,104 @@
+.nav .center{
+  color: #141414;
+}
+/* container */
+.container{
+  position: absolute;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  scroll-snap-type: y mandatory;
+  scroll-snap-points-y: repeat(300px);
+}
+.container .box1{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  scroll-snap-align: center;
+}
+.container .box1 .detail{
+  font-family: 'NEXON Lv2 Gothic Bold';
+  display: flex;
+  gap: 20px;
+  font-size: 1.4em;
+}
+.container .box1 .detail span{
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+.container .box1 .detail span:hover{
+  transform: scale(1.05);
+  color: #FC4B61;
+}
+.container .box1 .head{
+  font-family: 'GmarketSansBold';
+  color: #141414;
+  font-size: 2.8em;
+  margin-top: 54px;
+}
+.container .box1 .stori_title{
+  width: 35%;
+  margin-top: 12vh;
+}
+
+.container .box2{
+  width: 100%;
+  min-height: 100vh;
+  max-width: 1080px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  scroll-snap-align: center;
+}
+.container .box2 .left{
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+}
+.container .box2 .left p{
+  font-family: 'GmarketSansBold';
+  font-size: 5.25em;
+  line-height: 1em;
+  letter-spacing: -3px;
+}
+.container .box2 .right{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.container .box2 .right p{
+  font-family: 'NEXON Lv2 Gothic';
+  font-size: 1.4em;
+}
+.container .box2 .right .box{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.container .box2 .right .box button{
+  width: 50%;
+  padding: 16px 30px;
+  color: white;
+  background-color: #1F1F1F;
+  margin-top: 26px;
+  border-radius: 25px;
+  border: none;
+  outline: none;
+  font-size: 1.3em;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+}
+.container .box2 .right .box button:hover{
+  background-color: rgb(45, 52, 54);
+  transform: scale(1.05);
+}
+
+.test{
+  height: 50vh;
+}

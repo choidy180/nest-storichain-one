@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/nav.css">
+  <link rel="stylesheet" href="/css/login.css">
+  <title><%=title%></title>
+</head>
+<body>
+  <%-include('nav.ejs') %>
+  <div class="container">
+    <div class="back">
+      <img src="/images/01F6BBA3-3DBC-4748-A8CE-D99972B60F3F.jpeg" alt="">
+    </div>
+    <div class="container2">
+      <div class="box">
+        <div>
+          <p class="title">로그인</p>
+          <p class="sub_title">비밀번호를 잊으셨나요?</p>
+        </div>
+        <input class="top" type="text" placeholder="이메일(exam@gmail.com)" oninput="checkInput();">
+        <input class="bottom" type="password" placeholder="비밀번호" oninput="checkInput();">
+        <button class="btn" onclick="alert('1111111')">로그인</button>
+      </div>
+    </div>
+  </div>
+  <script>
+    function checkInput(){
+      const checkId = document.querySelector('.top');
+      const checkPwd = document.querySelector('.bottom');
+      const btn = document.querySelector('.btn');
+
+      var regEmail = /^[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/;
+      if(regEmail.test(checkId.value) == true) {
+        if(checkPwd.value.length > 5){
+          btn.id = "active";
+          btn.disabled = false;
+        } else {
+          btn.id = "";
+          btn.disabled = true;
+        }
+      } else {
+        btn.id = "";
+        btn.disabled = true;
+      }
+    }
+  </script>
+</body>
+</html>

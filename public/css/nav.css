@@ -1,0 +1,94 @@
+/* nav */
+.nav{
+  width: calc(100% - 60px);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 30px 30px 20px 30px;
+  position: absolute;
+}
+.nav .left{
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  z-index: 999999;
+}
+.nav .left ion-icon{
+  cursor: pointer;
+  font-size: 2em;
+  transition: all 0.2s ease-in-out;
+}
+.nav .left ion-icon:hover{
+  transform: rotate(90deg);
+}
+.nav .center{
+  position: relative;
+  z-index: 999999;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  font-family: 'GmarketSansBold';
+  font-size: 1.8em;
+  cursor: pointer;
+}
+.nav .right{
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-content: center;
+}
+.nav .right .sign_btn{
+  padding: 10px 15px 10px 15px;
+  font-family: 'MaplestoryOTFLight';
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.8em;
+  border: 2px solid rgb(178, 190, 195);
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.25s ease-in-out;
+  position: relative;
+  z-index: 999999;
+}
+.nav .right .sign_btn:hover{
+  border: 2px solid rgb(45, 52, 54)
+}
+.nav .right .sign_btn span{
+  cursor: pointer;
+  color: black;
+}
+.nav .right .sign_btn span:hover{
+  transform: scale(1.05);
+}
+
+.nav .right .login_btn{
+  padding: 10px 22px 10px 22px;
+  font-family: 'MaplestoryOTFLight';
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.8em;
+  border: 2px solid black;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.25s ease-in-out;
+  position: relative;
+  z-index: 999999;
+}
+.nav .right .login_btn span{
+  cursor: pointer;
+  color: black;
+  transition: 0.2s all ease-in-out;
+}
+.nav .right .login_btn:hover{
+  transform: scale(1.05);
+  border: 2px solid rgb(53, 59, 72);
+}

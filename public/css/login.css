@@ -1,0 +1,100 @@
+.nav .left ion-icon{
+  color: white;
+}
+.nav .center span{
+  color: white;
+}
+.nav .right .sign_btn span{
+  cursor: pointer;
+  color: white;
+}
+body{
+  max-height: 100vh;
+  overflow: hidden;
+}
+.container{
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+.container .back{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.container .back img{
+  height: 100vh;
+  filter: brightness(35%);
+}
+
+.container2{
+  position: absolute;
+  width: 100vw;
+  min-width: 700px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.container2 .box{
+  width: 300px;
+}
+.container2 .box div{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.container2 .title{
+  font-size: 1.1em;
+  color: white;
+  font-family: 'NEXON Lv2 Gothic';
+  font-weight: 700;
+}
+.container2 .sub_title{
+  font-size: 0.95em;
+  font-family: 'NEXON Lv2 Gothic';
+  color: white;
+}
+.container2 input{
+  width: calc(100% - 36px);
+  padding: 16px 20px 16px 20px;
+  font-size: 1em;
+  font-family: 'NEXON Lv2 Gothic';
+  border: 1px solid rgb(149, 165, 166);
+  outline: none;
+}
+.container2 input::placeholder{
+  font-family: 'NEXON Lv2 Gothic Light';
+}
+.container2 .top{
+  margin-top: 12px;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  border-bottom: 0px;
+}
+.container2 .bottom{
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+.container button{
+  width: 100%;
+  border-radius: 24px;
+  border: none;
+  outline: none;
+  padding: 16px 0;
+  background-color: #FC4B61;
+  color: white;
+  margin-top: 12px;
+  font-size: 1em;
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+#active{
+  opacity: 1;
+  cursor: pointer;
+}

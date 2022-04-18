@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%=title%></title>
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/nav.css">
+  <link rel="stylesheet" href="/css/join.css">
+</head>
+<body>
+  <%-include('nav.ejs') %>
+  <div class="back">
+    <img src="/images/etienne-girardet-EP6_VZhzXM8-unsplash.jpg" alt="">
+  </div>
+  <div class="container">
+    <p class="title">회원가입</p>
+    <input type="text" class="name" placeholder="이름(2자 이상)" oninput="checkValue();">
+    <input type="text" class="id" placeholder="이메일(example@gmail.com)" oninput="checkValue();">
+    <input type="password" class="password" placeholder="영문,숫자,특수문자 조합 8자 이상" oninput="checkValue();">
+    <p class="checkAll"><input type="checkbox" name=""><label>전체 약관에 동의합니다</label></p>
+    <p class="check"><input type="checkbox" name=""><label>만 14세 이상입니다 (필수)</label></p>
+    <p class="check"><input type="checkbox" name=""><label>스토리체인 이용약관에 동의합니다 (필수)</label></p>
+    <button class="joinBtn" disabled>계정 생성하기</button>
+  </div>
+  <script>
+    function checkValue(){
+      const nameCheck = document.querySelector('.name').value.length > 1;
+      const emailValue = document.querySelector('.id').value;
+      const passwordValue = document.querySelector(".password").value;
+      let emailCheck = false;
+      let passwordCheck = false;
+      var regEmail = /^[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/;
+      var regPassword = "^(?=.*[A-Za-z])(?=.*\d)(?=.*[$@$!%*#?&])[A-Za-z\d$@$!%*#?&]{8,}$";
+      var num = passwordValue.search(/[0-9]/g);
+      var eng = passwordValue.search(/[a-z]/ig);
+      var spe = passwordValue.search(/[`~!@@#$%^&*|₩₩₩'₩";:₩/?]/gi);
+
+      var joinBtn = document.querySelector('.joinBtn');
+      
+      if (regEmail.test(emailValue) === true) {
+        emailCheck = true;
+      }
+      if(passwordValue.length < 8 || passwordValue.length > 20){
+      }else if(passwordValue.search(/\s/) != -1){
+      }else if(num < 0 || eng < 0 || spe < 0 ){
+      }else {
+        passwordCheck = true;
+      }
+      console.log(nameCheck, emailCheck, passwordCheck);
+      if(nameCheck && emailCheck && passwordCheck){
+        joinBtn.disabled = false;
+        joinBtn.id = "active";
+      } else {
+        joinBtn.disabled = true;
+        joinBtn.id = "";
+      }
+    }
+
+  </script>
+</body>
+</html>
